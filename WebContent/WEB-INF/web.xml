@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>meeting</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <listener>
+    <listener-class>com.icss.meeting.listener.CounterListener</listener-class>
+  </listener>
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.icss.meeting.filter.LoginFilter</filter-class>	
+	
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/updatePass.jsp</url-pattern>
+		<url-pattern>/searchemployees.jsp</url-pattern>
+		<url-pattern>/mynotification.jsp</url-pattern>
+		<url-pattern>/mymeetings.jsp</url-pattern>
+		<url-pattern>/mymeetingdetail.jsp</url-pattern>
+		<url-pattern>/mybookings.jsp</url-pattern>
+		<url-pattern>/mybookingdetail.jsp</url-pattern>
+		<url-pattern>/meetingroomdetail.jsp</url-pattern>
+		<url-pattern>/employeeleft.jsp</url-pattern>
+		<url-pattern>/employeeindex.jsp</url-pattern>
+		<url-pattern>/departments.jsp</url-pattern>
+		<url-pattern>/bookmeeting.jsp</url-pattern>
+		<url-pattern>/approveaccount.jsp</url-pattern>
+		<url-pattern>/allmeetingrooms.jsp</url-pattern>
+		<url-pattern>/adminleft.jsp</url-pattern>
+		<url-pattern>/adminindex.jsp</url-pattern>
+		<url-pattern>/addmeetingroom.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	
+	</filter-mapping>
+
+</web-app>
